@@ -1,0 +1,134 @@
+<!-- Criado por Marise Miranda | 2017.1 -->
+<!-- Adaptado por Matheus Matos | 2025.1 -->
+
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriela & Giulia's Machine</title>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+</head>
+
+<body>
+
+    <!-- divs para o "corpo" da machine -->
+    <div class="intro">
+        <div class="machine">
+
+            <!-- div para o título -->
+            <div class="title">
+            <h1>Gabriela & Giulia's Machine</h1>
+            </div>
+
+            <!-- div para os inputs-->
+        <div class="div-input">
+            <label for="ipt_base">Digite a base do número que você está convertendo:</label>
+            <select id="ipt_base" name="base">
+                <option value="escolha">Escolha uma opção!</option>
+                <option value="decimal">Decimal</option>
+                <option value="binario">Binário</option>
+                <option value="octal">Octal</option>
+                <option value="hexadecimal">Hexadecimal</option>
+              </select>
+
+            <label for="ipt_demo">Digite o número desejado:</label>
+            <input id="ipt_demo" type="text" placeholder="Ex: 42">
+        </div>
+
+        <button onclick="converter()">Converter</button>
+
+                <h3>Resultados:</h3>
+
+            <div class="div-resposta">
+
+                <!-- div para o "bloco" binário -->
+                <div class="decimal">
+                    <a>Decimal:
+                    <div id="demo1"></div>
+                    </a>
+                </div>
+
+                <!-- div para o "bloco" binário -->
+                <div class="binario">
+                    <a>Binário:
+                    <div id="demo2"></div>
+                    </a>
+                </div>
+
+                <!-- div para o "bloco" octal -->
+                <div class="octal">
+                    <a>Octal:
+                    <div id="demo3"></div>
+                    </a>
+                </div>
+
+                <!-- div para o "bloco" hexadecimal -->
+                <div class="hexadecimal">
+                    <a>Hexadecimal:
+                    <div id="demo4"></div>
+                    </a>
+                </div>
+
+                
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <a>by Gabriela Pinheiro & Giulia Santiago</a>
+    </footer>
+
+</body>
+
+    <script>
+        var numero;
+        function converter() {
+            var base = ipt_base.value;
+
+            if(base == 'decimal'){
+                numero = parseInt(ipt_demo.value, 10);
+
+                demo1.innerHTML = numero.toString(10);
+                demo2.innerHTML = numero.toString(2);
+                demo3.innerHTML = numero.toString(8);
+                demo4.innerHTML = numero.toString(16);
+
+            }
+
+            else if(base == 'binario'){
+                numero = parseInt(ipt_demo.value, 2);
+
+                demo1.innerHTML = numero.toString(10);
+                demo2.innerHTML = numero.toString(2);
+                demo3.innerHTML = numero.toString(8);
+                demo4.innerHTML = numero.toString(16);
+
+            }
+
+            else if(base == 'octal'){
+                numero = parseInt(ipt_demo.value, 8);
+
+                demo1.innerHTML = numero.toString(10);
+                demo2.innerHTML = numero.toString(2);
+                demo3.innerHTML = numero.toString(8);
+                demo4.innerHTML = numero.toString(16);
+
+            }
+
+            else if(base == 'hexadecimal'){
+                numero = parseInt(ipt_demo.value, 16);
+
+                demo1.innerHTML = numero.toString(10);
+                demo2.innerHTML = numero.toString(2);
+                demo3.innerHTML = numero.toString(8);
+                demo4.innerHTML = numero.toString(16);
+
+            }
+
+        }
+    </script>
+
+</html>
