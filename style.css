@@ -17,7 +17,7 @@ header {
     	align-items: center;
 	flex-direction: row;
 	width: 100%;
-	height: 50px;
+	height: 60px;
 	background-color: rgb(24, 12, 46);
 }
 
@@ -25,12 +25,7 @@ header {
 	display: flex;
    	justify-content: center;
     	align-items: center;
-	gap: 700px;
-}
-
-#navid span {
-	font-size: 25px;
-	color: rgb(191, 100, 140);
+	gap: 500px;
 }
 
 #navid a {
@@ -73,7 +68,6 @@ header {
 .botao::before {
 	content: '';
 	background-color: rgb(191, 100, 140);
-	color: aqua;
 	width: 0; /*deixar no 0 para sumir bolinha quando não estamos com o mouse em cima*/
 	height: 0;
 	position: absolute;
@@ -87,9 +81,48 @@ header {
 .botao:hover::before {
 	width: 1500px;
 	height: 1500px;
-
-
-
-
 } /*quando usuario passar o mouse em cima vai aplicra efeito para o before*/
 
+.texto_animacao {
+	color:  rgb(232, 201, 214);
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.texto_animacao span {
+	color:  rgb(232, 201, 214);
+	position: relative;
+}
+
+.texto_animacao span::before {
+	content: "";
+	color: rgb(191, 100, 140);
+	animation: machina 20s infinite;
+}
+
+.texto_animacao span::after {
+	content: "";
+	position: absolute; 
+	height: 100%;
+	border-left: 2px solid rgb(232, 201, 214);
+	right: -10px;
+	opacity: 1;
+	animation: cursor 0.8s infinite;
+}
+
+@keyframes cursor {
+	0% {
+		opacity: 0; /*transparente*/
+	}	
+}
+
+/*keyframes animação no css*/
+@keyframes machina {
+	0%, 50%{
+		content: " Gabriela e Giulia's Machine";
+	}
+	51%, 100%{
+		content: " solução para as converções";
+	}
+	
+}
