@@ -1,0 +1,95 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:'Times New Roman', Times, serif;
+}
+
+header {
+	display: flex;
+   	justify-content: center;
+    	align-items: center;
+}
+
+#navid {
+	display: flex;
+   	justify-content: center;
+    	align-items: center;
+	flex-direction: row;
+	width: 100%;
+	height: 50px;
+	background-color: #f9e79f;
+}
+
+#navid ul {
+	display: flex;
+   	justify-content: center;
+    	align-items: center;
+	gap: 700px;
+}
+
+#navid span {
+	font-size: 25px;
+	color: #fff;
+}
+
+#navid a {
+	font-size: 25px;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.div_pagina {
+ 	width: 100%;
+ 	background-image: url(25335.jpg);
+}
+
+
+.div_botao{
+	height: 500px;  /*define se vai para cima ou para baixo na tela*/
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.botao {
+	padding: 50px 100px; /*tamanho do nosso botão*/
+	background-color: #f8c471;
+	color:  #fff;
+	border-radius: 100px;
+	text-decoration: none; /*tira o visual link pq usamos tag de link*/
+	cursor: pointer;
+	position: relative;
+	overflow: hidden; /*tudo o que vazar de cor vai ficar só dentro dele*/
+}
+
+.botao span {
+	font-size: 50px;
+	font-weight: 700;
+	position: relative;
+}
+
+.botao::before {
+	content: '';
+	background-color: #f7dc6f;
+	color: #fff;
+	width: 0; /*deixar no 0 para sumir bolinha quando não estamos com o mouse em cima*/
+	height: 0;
+	position: absolute;
+	border-radius: 50%;
+	top: var(--eixoy); /*chamando as variaveis la do js*/
+	left: var(--eixox);
+	transform: translate(-50%, -50%); /*centralizar o movimento do elemento com o mouse*/
+	transition: width .7s, height .7s; /*tempo demora para expandir cor*/
+}
+
+.botao:hover::before {
+	width: 1500px;
+	height: 1500px;
+
+
+
+
+} /*quando usuario passar o mouse em cima vai aplicra efeito para o before*/
+
