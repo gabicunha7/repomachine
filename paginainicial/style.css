@@ -106,23 +106,37 @@ header {
 	height: 100%;
 	border-left: 2px solid rgb(232, 201, 214);
 	right: -10px;
-	opacity: 1;
-	animation: cursor 0.8s infinite;
+	/*opacity: 1;*/
+	animation: cursor 0.8s infinite, digitar 50s infinite;
+	width: calc(100% + 5px); /*calculo matemático no css, não fazer no cursor ficar no meio da letra*/
+	background-color: rgb(24, 12, 46); 
+}
+
+@keyframes digitar {
+	10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+		width: 0; /*condição final animação digitar*/
+	}
+	5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85% {
+		width: calc(100% + 5px); /*condição final*/
+	}
+	/*vai mostrando a frase conforme o cursor vai passando*/	
 }
 
 @keyframes cursor {
 	0% {
-		opacity: 0; /*transparente*/
+		border-left: 2px solid rgb(24, 12, 46); /*só o cursor fica piscando, não a palavra, 
+		background esconde a palavra*/
+		/*opacity: 0; /*transparente do cursor*/
 	}	
 }
 
 /*keyframes animação no css*/
 @keyframes machina {
 	0%, 50%{
-		content: " Gabriela e Giulia's Machine";
+		content: " Gabriela and Giulia's Machine";
 	}
 	51%, 100%{
-		content: " solução para as converções";
+		content: " solução para as suas converções";
 	}
 	
 }
