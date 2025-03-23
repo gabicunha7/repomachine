@@ -5,6 +5,10 @@
 	font-family:'Times New Roman', Times, serif;
 }
 
+body {
+	background-image: url(../01.webp);
+}
+
 header {
 	display: flex;
    	justify-content: center;
@@ -34,12 +38,6 @@ header {
 	text-decoration: none;
 	cursor: pointer;
 }
-
-.div_pagina {
- 	height: 100vh;
- 	background-image: url(../01.webp);
-}
-
 
 .div_botao{
 	height: 500px;  /*define se vai para cima ou para baixo na tela*/
