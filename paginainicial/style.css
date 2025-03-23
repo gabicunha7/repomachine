@@ -84,13 +84,13 @@ header {
 } /*quando usuario passar o mouse em cima vai aplicra efeito para o before*/
 
 .texto_animacao {
-	color:  rgb(255, 212, 132);;
+	color:  rgb(255, 212, 132);
 	font-size: 25px;
 	font-weight: 500;
 }
 
 .texto_animacao span {
-	color:  rgb(255, 212, 132);;
+	color:  rgb(255, 212, 132);
 	position: relative;
 }
 
