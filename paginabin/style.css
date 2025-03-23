@@ -3,7 +3,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background-image: url(01.webp);
+	background-image: url(../01.webp);
 }
 
 .binario {

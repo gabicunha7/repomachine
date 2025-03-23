@@ -17,7 +17,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(01.webp);
+    background-image: url(../01.webp);
 }
 
 .machine{
